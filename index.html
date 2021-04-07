@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script> 
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/favicon-32x32.png">
+    <title>IP Address Tracker</title>
+</head>
+<body>
+    <div class="ip-address-tracker">
+        <div class="wrapper">
+            <div class="ip-header">
+                <h2 class="ip-header-tittle">IP Address Tracker</h2>
+                
+                <form action="" class="ip-header-form" id="ip-header-form" autocomplete="off">
+                    <input type="text" placeholder="Search for any IP address" id="APIconsultarInput">
+                    <button><img src="images/icon-arrow.svg" alt=""></button>
+                </form>
+            </div>
+
+            <div class="ip-table-info">
+
+                <div class="loader" id="loader"></div>
+
+                <div class="ip-table-elements" id="ip-table-elements">
+                    <div class="ip-table-element">
+                        <p class="ip-table-element-title">Ip address</p>
+                        <p class="ip-table-element-text" id="ip"></p>
+                    </div>  
+      
+                    <div class="ip-table-element">
+                      <p class="ip-table-element-title">Location</p>
+                      <p class="ip-table-element-text" id="location"></p>
+                    </div>  
+      
+                    <div class="ip-table-element">
+                      <p class="ip-table-element-title">timezone</p>
+                      <p class="ip-table-element-text" id="timezone"></p>
+                    </div>  
+      
+                    <div class="ip-table-element">
+                      <p class="ip-table-element-title">isp</p>
+                      <p class="ip-table-element-text" id="isp"></p>
+                    </div>  
+                </div>
+          
+            </div>
+        </div> 
+        <div class="map-section" id="map-section"></div>      
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

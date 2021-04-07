@@ -1,0 +1,257 @@
+
+:root{
+    /* Colors */
+    --veryDarkGray: hsl(0, 0%, 17%);
+    --darkGray: hsl(0, 0%, 59%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*:focus{
+    outline: none;
+}
+
+body{
+    font-size: 18px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.wrapper{
+    width: 100%;
+    max-width: 1110px;
+    padding: 1.5em;
+    margin: auto;
+}
+
+/* ip header */
+.ip-address-tracker{
+    background-image: url("images/pattern-bg.png");
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+}
+.ip-header-tittle{
+    text-align: center;
+    color: white;
+    font-weight: 500;
+}
+/* Form */
+.ip-header-form{    
+    display: flex;
+    position: relative;
+    max-width: 550px;
+    margin: auto;
+    margin-top: 1.3em;
+}
+.ip-header-form input{
+    width: 100%;
+    height: 60px;
+    border-radius: 14px;
+    border: none;    
+    padding-left: 1em;
+    font-size: 1em;
+    font-weight: 500;
+    color: var(--veryDarkGray);
+}
+.ip-header-form input::placeholder{
+    color: grey;
+    font-size: .75em;
+}
+
+.ip-header-form button{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    right: 0px;
+    border: none;
+    border-top-right-radius: 14px;
+    border-bottom-right-radius: 14px;
+    background: black;
+    cursor: pointer;
+}
+
+/* ip table info */
+.ip-table-info{
+    width: 100%;
+    height: 300px;
+    background: white;
+    margin-top: 1.2em;
+    border-radius: 1em;
+    box-shadow: 1px 1px 20px -10px rgba(0, 0, 0, 0.25);
+    padding: 1.5em 0;
+    margin-bottom: -195px;
+    position: relative;
+    z-index: 10000;
+}
+.ip-table-elements{
+    display: none;
+}
+
+.ip-table-element{
+    text-align: center;
+    margin-top: 1.5em;
+}
+.ip-table-element:first-child{
+    margin-top: 0px;
+}
+.ip-table-element-title{
+    text-transform: uppercase;
+    font-size: .55em;
+    color: var(--darkGray);
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.ip-table-element-text{
+    margin-top: .3em;
+    font-weight: 500;
+    font-size: 1.1em;
+}
+/* Map section */
+.map-section{
+    height: 650px;
+}
+
+.loader {
+    color: #5a79e3;
+    font-size: 60px;
+    text-indent: -9999em;
+    overflow: hidden;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    margin: auto;
+    position: absolute;
+    top: calc(50% - 30px);
+    left: 0;
+    right: 0;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation: load6 1.7s infinite ease, round 1.7s infinite ease;
+    animation: load6 1.7s infinite ease, round 1.7s infinite ease;
+  }
+  @-webkit-keyframes load6 {
+    0% {
+      box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+    5%,
+    95% {
+      box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+    10%,
+    59% {
+      box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+    }
+    20% {
+      box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
+    }
+    38% {
+      box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
+    }
+    100% {
+      box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+  }
+  @keyframes load6 {
+    0% {
+      box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+    5%,
+    95% {
+      box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+    10%,
+    59% {
+      box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+    }
+    20% {
+      box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
+    }
+    38% {
+      box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
+    }
+    100% {
+      box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+  }
+  @-webkit-keyframes round {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes round {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+
+/* Media query */
+@media screen and (min-width: 1440px){
+    .ip-address-tracker{
+        padding-top: 1.5em;
+    }
+    .ip-header-form{
+        margin-top: 2em;
+    }
+    .ip-header-form input::placeholder{
+        font-size: 1em;
+    }
+    .ip-header-tittle{
+        font-size: 2em;
+    }
+    .ip-table-info{
+        margin-top: 2.5em;
+        margin-bottom: -125px;
+        height: 160px;
+    }
+    .ip-table-info .ip-table-elements{
+        display: grid;
+        justify-content: space-between;
+        align-items: center;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .ip-table-element{
+        margin-top: 0;
+        padding: 0 1.5em 0 2.5em;
+        text-align: left;
+        position: relative;
+        height: 84px;
+    }   
+    .ip-table-element::after{
+        content: "";
+        display: block;
+        background: var(--darkGray);
+        height: 60px;
+        width: 1px;
+        position: absolute;
+        top: .5em;
+        left: 0;
+        opacity: .7;
+    }
+    .ip-table-element:first-child::after{
+        display: none;
+    }
+    .ip-table-element-title{
+        font-size: .75em;
+        font-weight: 500;
+    }
+    .ip-table-element-text{
+        font-size: 1.4em;
+        margin-top: .5em;
+    }
+
+
+}
